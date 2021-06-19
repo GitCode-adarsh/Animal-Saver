@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Animal Saver</title>
+        <link rel="shortcut icon" type="image/png" href="covidhero.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="Animal_main_logo.png">
+        <script src="main.js"></script></head>
+    </head>
+    <body>
+        <nav class="navbar-inverse my_nav_bar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <a class="navbar-brand" href="Help.html">Animal Saver</a>
+                    <a class="navbar-brand" href="Donation.html">Donation</a>
+                    <a class="navbar-brand" href="Adopt.html">Adopt</a>
+                    <a class="navbar-brand" href="Promotion.html">Promotion</a>
+                    <a class="navbar-brand" href="HelpCenter.html">Animal HelpCenter</a>
+                    <a class="navbar-brand" href="volunteer.html">Volunteer</a>
+                    <a class="navbar-brand" href="firstaidkit.html">Do's & Dont's</a>
+                    <a class="navbar-brand" href="trainanimal.html">Pet Training Center</a>
+                    </ul>
+                    
+                    </div>        
+                </nav>
+            <center><h2>Volunteer Registration</h2></center>      
+    <form class="container" id="contactForm">
+       <div class="volunteer_form">
+           <h3 id="Thanks"></h3>
+                <div class="form-group">
+                    <label>Name:</label> 
+                    <input type="text" class="form-control"id="first-name" placeholder="Enter your First Name:"><br>
+                    <input type="text" class="form-control" id="last-name" placeholder="Enter your Last Name:">
+                </div>
+                <div class="form-group">
+                    <label>Email address:</label>       
+                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Tell us Why you want to become a volunteer:</label>       
+                    <textarea class="form-control" id="reason" style="resize: none;"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Contact No:</label>       
+                    <input type="text" class="form-control" id="contact-no" placeholder="Enter you Contact No">
+                </div>
+           <center> <button type="submit" onclick="sub();" class="btn btn-primary" style="margin-left: 15px; margin-top: 10px">Submit</button></center>
+        </div>
+        </div>
+    </form>
+  </center>
+    <script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+    </script>
+      
+    <script>
+         var firebaseConfig = {
+    apiKey: "AIzaSyCmdHIqUOrekErml_LuMWvMcl2BnyIkAR4",
+    authDomain: "animal-saver-b493a.firebaseapp.com",
+    databaseURL: "https://animal-saver-b493a-default-rtdb.firebaseio.com",
+    projectId: "animal-saver-b493a",
+    storageBucket: "animal-saver-b493a.appspot.com",
+    messagingSenderId: "1036531137986",
+    appId: "1:1036531137986:web:5c569963592ab21fcaaa5b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+        var messagesRef = firebase.database()
+            .ref('Collected Data');
+          
+        document.getElementById('contactForm')
+            .addEventListener('submit', submitForm);
+  function sub(){
+      document.getElementById("Thanks").innerHTML = "Thank you for sign up we will reach back to you soon"
+  }
+        function submitForm(e) {
+            e.preventDefault();
+  
+            // Get values
+            var firstname = getInputVal('first-name');
+            var lastname = getInputVal('last-name');
+            var email = getInputVal('email');
+            var reason = getInputVal('reason');
+            var Contact = getInputVal('contact-no');
+
+            saveMessage(firstname,lastname, email,Contact,reason);
+            document.getElementById('contactForm').reset();
+        }
+  
+        // Function to get get form values
+        function getInputVal(id) {
+            return document.getElementById(id).value;
+        }
+  
+        // Save message to firebase
+        function saveMessage(firstname,lastname, email,Contact,reason) {
+            var newMessageRef = messagesRef.push();
+            newMessageRef.set({
+                Firstname: firstname,
+                Lastname: lastname,
+                email: email,
+                resonofvol: reason,
+                contact: Contact
+            });
+        }
+    </script>
+</body>
+  
+</html>

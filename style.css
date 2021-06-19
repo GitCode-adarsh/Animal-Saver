@@ -1,0 +1,177 @@
+#start-btn
+{
+    width: 40%;
+} 
+#logo_img
+{
+    width: 150px;
+    border-radius: 100px;
+}
+#textbox
+{
+    resize: none;
+    width: 300px;
+}
+body{
+	background-color: rgb(36, 35, 35);
+	color: white;
+}
+#login_div1 
+	{
+		background: violet;
+        color: darkblue;
+		padding: 10px;
+		float: none;
+		border-radius: 15px;
+		height: fit-content;
+	}
+body {
+	height: 100%;
+	margin: 0;
+}
+.navbar-brand{
+	background-color: black;
+}
+.adoptioncolor{
+	background-color: white;
+	color: rebeccapurple;
+	border-radius: 100px;
+	border-style: ridge;
+	margin-left: 99;
+}
+.donation_page{
+	background-color: white;
+	color: rebeccapurple;
+	border-radius: 100px;
+}
+.Address{
+top:35%;
+left: 20%;
+background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff);
+background-size: 400%;
+font-family: sans-serif;
+letter-spacing: 5px;
+font-weight: 600;
+word-spacing: 5px;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+animation: animate 10s linear infinite;
+}
+@keyframes animate{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 500%;
+	}
+}
+a:hover{
+text-decoration: none;
+color: red;
+}
+* {
+	box-sizing: border-box;
+  }
+  
+  #myInput {
+	background-image: url('/css/searchicon.png');
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 100%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+  }
+  
+  #myUL {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #myUL li a {
+	border: 1px solid #ddd;
+	margin-top: -1px;
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block
+  }
+  
+  #myUL li a:hover:not(.header) {
+	background-color: #eee;
+  }
+  .PHONE-NUMBER{
+	top:35%;
+	left: 20%;
+	background: linear-gradient(90deg, YELLOW, BLUE, RED, GREEN,BROWN,PURPLE,LIGHTGREEN,ORANGE,ORANGERED);
+	background-size: 400%;
+	font-family: sans-serif;
+	letter-spacing: 5px;
+	font-weight: 600;
+	word-spacing: 5px;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: animate 10s linear infinite;
+	}
+	@keyframes animate{
+		0%{
+			background-position: 0%;
+		}
+		100%{
+			background-position: 500%;
+		}
+	}
+.volunteer_form
+	{
+		background-color: aqua;
+        color: #ff0000;
+		padding: 10px;
+		float: none;
+		border-radius: 15px;
+		height: fit-content;
+	}
+	.light_text{
+		top:35%;
+		left: 20%;
+		background: linear-gradient(90deg, #ff0000,#ffff00, rgb(0, 255, 0));
+		background-size: 400%;
+		font-family: sans-serif;
+		letter-spacing: 5px;
+		font-weight: 600;
+		word-spacing: 5px;
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		animation: animate 10s linear infinite;
+		}
+		@keyframes animate{
+			0%{
+				background-position: 0%;
+			}
+			100%{
+				background-position: 500%;
+			}
+		}
+		.volunteer_form textarea{
+			height: 200px;
+			resize: none;
+		}
+		#div_left{
+			background-color: green;
+			width: 50%;
+			float: left;
+			padding: 17.9px;
+		}
+		#div_right{
+			background-color: red;
+			padding: 10px;
+			width: 50%;
+			float: right;
+		}
+		.trainanimal{
+			background-color: white;
+		}
+		
